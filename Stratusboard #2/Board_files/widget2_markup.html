@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+<head>
+<meta http-equiv="refresh" content="80" >
+</head>
+<style>
+  body {
+	   font: 70px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica-Light", "Helvetica Neue";
+	   color: white;
+	   -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+
+	   }
+</style>
+ <div id="loadpage" style="position:absolute; 
+    left:0px; top:0px; 	background-image: http://web.me.com/drew_smith/Stratus_2.0/Board_files/Splash.jpg;
+    layer-background-color:white; height:100%; 
+    width:100%;"> 
+    <p align="center" style="font-size: small;">
+    <img src="http://web.me.com/drew_smith/Stratusboard/Scripts/Widgets/Resources/Spinner.gif">
+    </p>
+    </div>
+<span id="followers"></span>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.ajax({
+        url: 'http://api.twitter.com/1/users/show.json',
+        data: {screen_name: 'dreworionsmith'},
+        dataType: 'jsonp',
+        success: function(data) {
+            $('#followers').html(data.followers_count);
+        }
+    });
+});
+</script>
+<script>
+$(document).ready(function() 
+	{
+		$("#loadpage").hide();
+	});
+</script>
+</body>
+</html>

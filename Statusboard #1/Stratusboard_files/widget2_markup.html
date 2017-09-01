@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><body><head>
+</head>
+<style>
+  body {
+	font: 50px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: white;
+	text-shadow: 0px -1px 0px black;
+	-webkit-font-smoothing: antialiased;
+
+}
+</style>
+<span id="followers"></span>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.ajax({
+        url: 'http://api.twitter.com/1/users/show.json',
+        data: {screen_name: 'dreworionsmith'},
+        dataType: 'jsonp',
+        success: function(data) {
+            $('#followers').html(data.followers_count);
+        }
+    });
+});
+</script></body></html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:C410878A-036F-463F-8E5F-010BAB7B46BD</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-01-10T05:32:57+08:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:25C41327-4169-40B1-96CE-62A3F06DAC6E</id>
+  <title>Stratusboard</title>
+  <title xmlns="urn:iweb:">Stratusboard</title>
+  <in-navbar xmlns="urn:iweb:">25C41327-4169-40B1-96CE-62A3F06DAC6E</in-navbar>
+  <link rel="alternate" href="Stratusboard.html"/>
+  <updated>2011-01-10T05:32:57.001+08:00</updated>
+  <content>Stratusboard</content>
+ </entry>
+</feed>

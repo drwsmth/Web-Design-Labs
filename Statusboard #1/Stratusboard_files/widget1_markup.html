@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta http-equiv="refresh" content="43200">
+        <meta charset="UTF-8">
+        <title>Twitter Widget</title>
+    	<div class="node" id="twitter">
+    	<style>
+    	
+*                                       { margin: 0; padding: 0;
+                                          font-size: 1em;
+                                          text-decoration: none;
+                                          border: none;
+                                          list-style: none;
+                                          outline: none; }
+/*body {
+        -webkit-text-stroke: 1px transparent;
+       }
+
+       }*/
+html                                    { overflow: auto;
+                                          -webkit-font-smoothing: antialiased; }
+body                                    { position: absolute;
+                                          top: 0; right: 10px; bottom: 0; left: 0;
+                                          color: white;
+                                          font: 12px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+                                          overflow-y: hidden;
+                                          overflow-x: hidden;
+                                          text-shadow: 0px -1px 0px black; }
+                                          
+@media only screen and (max-device-width:1024px)                             { 
+body                                    { position: relative;
+                                          top: auto; right: auto; bottom: auto; left: auto;
+                                          overflow: auto }
+}
+a                                       { color: #949494 }
+a:active                                { position: relative;
+                                          top: 1px }
+a:hover, a:focus                        { color: #white }
+#wrapper                                { width: 940px;
+                                          margin: 100px auto; padding: 0 20px;
+                                          overflow: hidden }
+#header                                 { position: absolute;
+                                          top: 100px; left: 50%;
+                                          width: 220px;
+                                          margin-left: 250px }
+#content                                { float: left;
+                                          width: 620px;
+                                          padding: 0 20px;
+                                          overflow: hidden }
+/* @group secondary content */
+#sec-content                            { float: right;
+                                          width: 220px;
+                                          padding-top: 203px;
+                                          color: #666;
+                                          font-size: 12px }
+#twitter h2                             { display: inline }
+#twitter h2:after                       { content: ":" }
+#twitter h2 a                           { color: #949494 }
+#twitter h2 a:hover, #twitter h2 a:focus
+                                        { color: white }
+#twitter ul, #twitter li                { display: inline;
+                                          font-style: italic }
+#twitter li:before                      { content: "“" }
+#twitter li:after                       { margin-left: -2px;
+                                          content: "”" }
+#twitter li a                           { display: inline-block;
+                                          max-width: 100px;
+                                          padding-left: 1px;
+                                          text-overflow: ellipsis;
+                                          white-space: nowrap;
+                                          overflow: hidden;
+                                          vertical-align: bottom; }
+#twitter a[title="Tweet Permalink"]     { display: none }
+
+/* @end */</style>
+
+        <h2><a href="http://twitter.com/dreworionsmith" rel="me">latest tweet</a></h2>
+        <ul id="twitter_update_list">
+                loading&hellip;
+        </ul>
+        </div>
+        </div>
+        <script src="http://maxvoltar.com/assets/js/twitter.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/dreworionsmith.json?callback=twitterCallback2&amp;count=1"></script>
+

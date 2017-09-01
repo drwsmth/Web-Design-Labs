@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+
+html, body { height: 100%; width: 100%; margin: 0; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-perspective: 1000px;}
+
+#background {
+	background-color: #73B9FF;
+	background-image: -webkit-linear-gradient(#0d1f61 0%, #1d63ae 28%, #74baff 64%, #cce9ff 94%);
+	
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	
+	z-index: 1;
+}
+
+#centering {
+	background-color: none;
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	
+	z-index: 2;
+}
+
+#card {
+    background-color: rgba(0,0,0,0.6);
+		
+	width: 100%;
+	height: 100%;
+	
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+		
+	-webkit-animation: flip 1.4s;
+	-moz-animation: flip 1.4s;
+
+}
+
+#text {
+	padding-top: 110px;
+}
+
+#text img {
+	opacity: 0.40;	
+	
+}
+
+
+#text h1 {
+	line-height: 0em;
+	font-size: 90px;
+	text-align: center;
+	font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	color: white;
+}
+
+#text h2 {
+	line-height: 0em;
+	font-size: 78px;
+	text-align: center;
+	font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	color: white;
+}
+
+
+#text h3 {
+	line-height: 0em;
+	font-size: 58px;
+	text-align: center;
+	font-family: 'Avenir Next', 'Lato', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: white;
+}
+
+
+#text p {
+	width: 400px;
+	margin: auto;
+	text-transform: uppercase;
+	font-size: 16px; text-align: center; font-family: "Avenir Next", Georgia, Times, serif; font-weight: normal; color: rgba(255,255,255,0.4);	
+}
+
+#logo {
+	padding-top: 20px;
+	width: 138px;
+	height: 90px;
+	margin: auto;
+}
+
+footer {
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+
+   	-webkit-animation: fade 2s 0s ease-in-out;
+	
+	z-index: 1;	
+	
+	color: rgba(8,45,76,0.5); font-size: 12px; text-align: center; font-family: Helvetica, Arial, sans-serif; font-weight: normal; 	text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
+}
+
+footer p {
+    -webkit-animation: fade 3s 0s ease-in-out;	
+	
+	font-weight: bold;	
+}
+
+
+/* End of button coding and beginning of the sky and cloud coding section. this area is volatile, please don't edit. */
+
+#sky {
+	background-image: -webkit-linear-gradient(rgba(158,224,255,0) 0%, rgba(194,235,255,0.98) 100%);
+	position:absolute;
+	bottom: 0;
+	width:100%;
+	height:700px;   /* Height of the cloud layer */
+   		
+   	-webkit-animation-name: fade 3s linear;
+	
+	z-index: 1;
+}
+
+#slowclouds {
+	background: url(slowcloud.png)repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+
+	-webkit-animation: cloudy 1000s linear 0s infinite;
+	
+	z-index: 2;
+
+}
+
+#fastclouds {
+	background: url(fastcloud.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+
+	-webkit-animation: cloudy 400s linear 0s infinite;
+	
+	z-index: 3;
+}
+
+/* End of the sky and cloud coding section, and the beginning of the effects collection. Edit with caution. */
+
+
+@-webkit-keyframes cloudy {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 1300% 0%
+	}
+}
+
+@-webkit-keyframes flip {
+    from {
+        -webkit-transform: rotateX(90deg) translateY(0px) perspective(500px);
+        transform: rotateX(90deg) translateY(0px) perspective(500px);
+        opacity: 0;
+    }
+
+    30% {
+        -webkit-transform: rotateX(-15deg) translateY(0px) perspective(500px);
+        transform: rotateX(-15deg) translateY(0px) perspective(500px);
+        opacity: 1;
+
+    }
+    
+    50% {
+        -webkit-transform: rotateX(4deg) translateY(0px) perspective(400px);
+        transform: rotateX(4deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+    70% {
+        -webkit-transform: rotateX(-2deg) translateY(0px) perspective(400px);
+        transform: rotateX(-2deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+    to {
+        -webkit-transform: rotateX(0deg) translateY(0px) perspective(400px);
+        transform: rotateX(0deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+}
+
+@-moz-keyframes flip {
+    from {
+        -moz-transform: rotateX(90deg) translateY(0px) perspective(500px);
+        transform: rotateX(90deg) translateY(0px) perspective(500px);
+        opacity: 0;
+    }
+
+    30% {
+        -moz-transform: rotateX(-15deg) translateY(0px) perspective(500px);
+        transform: rotateX(-15deg) translateY(0px) perspective(500px);
+        opacity: 1;
+
+    }
+    
+    50% {
+        -moz-transform: rotateX(4deg) translateY(0px) perspective(400px);
+        transform: rotateX(4deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+    70% {
+        -moz-transform: rotateX(-2deg) translateY(0px) perspective(400px);
+        transform: rotateX(-2deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+    to {
+        -moz-transform: rotateX(0deg) translateY(0px) perspective(400px);
+        transform: rotateX(0deg) translateY(0px) perspective(400px);
+        opacity: 1;
+
+    }
+    
+}
+
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to { 
+		opacity: 1;
+	}
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="sky">
+	<div id="slowclouds"></div>
+	<div id="fastclouds"></div>
+</div>
+
+
+<div id="background"></div>
+
+<div id="centering">
+    <div id="card">       
+	    <div id="text">
+	    	<h1>さようなら</h1>
+	    	<hr width="100" size="1" color="#adadad">
+	    	<h2>행운을 빌어 요</h2>
+	    	<hr width="100" size="1" color="#adadad">
+	    	<h3>See you soon</h3>
+	    	<h3><img src="Duck.png" alt="Duck" width="52" height="50" /></h3>
+		</div>
+		
+
+	</div> 
+</div>
+
+</body>
+
+</html>

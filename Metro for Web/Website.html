@@ -1,0 +1,257 @@
+<html>
+
+<style type="text/css">
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background-color: #31373a;
+	-webkit-perspective: 700px;
+}
+
+.object {
+	background-color: rgba(255,255,255,1);
+	width: 300px;
+	height: 600px;
+	float: left;
+	-webkit-transition: 0.2s ease-in-out;
+	
+}
+
+#objectname {
+	position: relative;
+	background-color: rgba(9,171,171,1);
+	background-image: url(PanelArt.png);
+	width: 300px;
+	height: 600px;
+	float: left;
+	-webkit-animation: shift 1s;
+	-webkit-box-shadow: 1px 1px 4px black;
+	opacity: 0;
+	-webkit-animation-fill-mode: forwards;
+	z-index: 1;
+}
+
+#objectname:hover {
+}
+
+
+#objectsocial {
+	position: relative;
+	background-color: rgba(255,255,255,1);
+	width: 300px;
+	height: 600px;
+	float: left;
+	-webkit-animation: shift 0.8s;
+	-webkit-box-shadow: 1px 1px 4px black;
+	opacity: 0;
+	-webkit-animation-fill-mode: forwards;
+	z-index: 2;
+}
+
+#objectsocial:hover {
+	}
+	
+#objectinfo {
+	position: relative;
+	background-color: rgba(255,255,255,1);
+	width: 300px;
+	height: 600px;
+	float: left;
+	-webkit-animation: shift 0.5s;
+	-webkit-box-shadow: 1px 1px 4px black;
+	opacity: 0;
+	-webkit-animation-fill-mode: forwards;
+	z-index: 3;
+}
+
+#objectinfo:hover {
+	}
+
+#name {
+	height: auto;
+	padding-top: 50px;
+	padding-left: 10px;
+}
+#name h1 {
+	width: 300px;
+	height: auto;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.0);
+	font-size: 100px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-shadow: none;
+}
+
+#name p {
+	margin-top: 155px;
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(255,255,255,1);
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#about {
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	color: rgba(33,33,33,1);
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	text-transform: none;
+	text-shadow: 0px 1px 1px white;
+}
+
+#about p {
+		margin-top: -30px;
+}
+
+#social {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-weight: lighter;
+	letter-spacing: -3px;
+	color: #383838;
+	list-style: none;
+	padding-top: 120px;
+	padding-bottom: 700px;
+	-webkit-transition: ease-in-out 0.4s;
+}
+
+#social:hover {
+	color: #ff0078;
+	-webkit-transition: ease-in-out 0.4s;
+	}
+
+h2 {
+	color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,0.0);
+	height: auto;
+	font-size: 40px;
+	font-weight: 100;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	text-shadow: none;
+}
+
+
+ul {
+	list-style: none;
+}
+
+li {
+	list-style: none;
+}
+
+
+#metrocontainer {
+	position: relative;
+  	-webkit-perspective: 700px;
+	width: 900px;
+	height: 600px;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	margin-top: -300px;
+	left: 50%;
+	margin-left: -450px;
+	float: left;
+	-webkit-transform: rotateX(0deg);
+	-webkit-transition: 0.2s ease-in-out;
+	}
+
+
+@-webkit-keyframes flip {
+    from {
+        -webkit-transform: rotateX(90deg) perspective(500px);
+        opacity: 1;
+    }
+    
+    to {
+        -webkit-transform: rotateX(0deg) perspective(400px);
+        opacity: 1;
+
+    }
+    
+}
+
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+
+    60% {
+		-webkit-transform: scale(1.1);
+		opacity: 1;
+    }
+    
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@-webkit-keyframes shift {
+    from {
+        -webkit-transform: translate(-1000px, 0px) scale(0.75) rotateY(-180deg);
+        opacity: 0;
+    }
+    
+    to {
+        -webkit-transform: translate(0px, 0px) scale(1) rotateY(-0deg);
+        opacity: 1;
+    }
+
+}
+
+
+</style>
+
+<body>
+
+<div id="metrocontainer">
+<tr>
+
+<td>
+	<div id="objectname">
+		<div id="name">
+			<h1></h1>
+			<p></p>
+		</div>	
+	</div>
+</td>
+
+<td>
+	<div id="objectsocial">
+		<div id="social">
+			<ul>
+			<li>Twitter</li>
+			<li>Portfolio</li>
+			<li>Resumé</li>
+			<li>Friends</li>
+			</ul>	
+		</div>
+	</div>
+</td>
+
+<td>
+	<div id="objectinfo">
+		<div id="about">
+		<h2>About me</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+</td>
+
+
+</tr>
+</div>
+
+</body>
+
+</html>
